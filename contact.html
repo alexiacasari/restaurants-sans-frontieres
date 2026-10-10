@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact & dons · Restaurants Sans Frontières</title>
+  <meta name="description" content="Contacter Restaurants Sans Frontières, faire un don ou devenir bénévole.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span class="logo-mark">RSF</span>Restaurants<br>Sans Frontières</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav">
+        <a href="index.html">Accueil</a>
+        <a href="association.html">L'association</a>
+        <a href="projets.html">Nos projets</a>
+        <a href="restaurateurs.html">Restaurateurs engagés</a>
+        <a href="contact.html" class="active" aria-current="page">Contact & dons</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Contact & dons</p>
+        <h1>Agissons ensemble</h1>
+        <p class="lead">Une question, un projet de partenariat, l'envie de donner ou de donner de votre temps : écrivez-nous.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div>
+          <h2>Nous écrire</h2>
+          <form id="contact-form">
+            <label>Nom<input name="nom" required autocomplete="name"></label>
+            <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+            <label>Vous êtes
+              <select name="profil">
+                <option>Restaurateur</option>
+                <option>Entreprise</option>
+                <option>Particulier</option>
+                <option>Bénévole</option>
+                <option>Presse</option>
+              </select>
+            </label>
+            <label>Message<textarea name="message" required></textarea></label>
+            <button class="btn" type="submit">Envoyer</button>
+          </form>
+        </div>
+        <div>
+          <h2>Coordonnées</h2>
+          <p><strong>E-mail :</strong> <span class="todo">contact@… à compléter</span><br>
+             <strong>Adresse :</strong> <span class="todo">à compléter</span></p>
+
+          <h2 id="dons" style="margin-top:40px">Faire un don</h2>
+          <p>Votre don finance directement la construction et l'équipement de cantines scolaires. <span class="todo">Préciser la déductibilité fiscale si applicable.</span></p>
+          <div class="actions"><a class="btn" href="#" aria-disabled="true">Donner en ligne <span class="todo" style="background:none;border:0;color:#fff">(lien à ajouter)</span></a></div>
+
+          <h2 style="margin-top:40px">Devenir bénévole</h2>
+          <p>Événements, communication, recherche de partenaires : il y a toujours une place pour vous. Indiquez « Bénévole » dans le formulaire.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Ouvre le client mail avec le message pré-rempli (à remplacer par un service de formulaire si besoin)
+      const CONTACT_EMAIL = ''; // à compléter, ex. contact@restaurants-sans-frontieres.org
+      document.getElementById('contact-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        if (!CONTACT_EMAIL) { alert("L'adresse de contact n'est pas encore configurée."); return; }
+        const body = `Nom : ${f.get('nom')}\nE-mail : ${f.get('email')}\nProfil : ${f.get('profil')}\n\n${f.get('message')}`;
+        location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Contact site – ' + f.get('profil'))}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© Restaurants Sans Frontières · Association créée en 2007</span>
+      <span><a href="association.html">L'association</a> · <a href="contact.html">Contact</a> · <a href="contact.html#dons">Faire un don</a></span>
+    </div>
+  </footer>
+  <script>
+    const t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+    t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil · Restaurants Sans Frontières</title>
+  <meta name="description" content="Restaurants Sans Frontières mobilise la restauration pour financer des cantines scolaires dans les régions défavorisées.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span class="logo-mark">RSF</span>Restaurants<br>Sans Frontières</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active" aria-current="page">Accueil</a>
+        <a href="association.html">L'association</a>
+        <a href="projets.html">Nos projets</a>
+        <a href="restaurateurs.html">Restaurateurs engagés</a>
+        <a href="contact.html">Contact & dons</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Association humanitaire · depuis 2007</p>
+          <h1>Des cantines pour que chaque enfant mange bien à l'école</h1>
+          <p class="lead">Restaurants Sans Frontières réunit les professionnels de la restauration pour financer la construction et l'équipement de cuisines et de cantines scolaires dans des régions défavorisées du monde.</p>
+          <div class="actions">
+            <a class="btn" href="contact.html#dons">Faire un don</a>
+            <a class="btn ghost" href="projets.html">Découvrir nos projets</a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Illustration d'une assiette"><span>Un repas sain,<br>une journée d'école</span></div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <p class="eyebrow">Ce que nous faisons</p>
+        <h2>La restauration au service des enfants</h2>
+        <div class="grid g3">
+          <div class="card"><div class="icon">🏗️</div><h3>Construire</h3><p>Nous finançons la construction de cuisines et de cantines scolaires là où les enfants n'ont pas de lieu pour manger dans de bonnes conditions.</p></div>
+          <div class="card"><div class="icon">🍳</div><h3>Équiper</h3><p>Matériel de cuisine, stockage, hygiène : nous fournissons de quoi préparer des repas sains et sûrs, au quotidien.</p></div>
+          <div class="card"><div class="icon">🌱</div><h3>Pérenniser</h3><p>Nous accompagnons la création de structures d'alimentation durables, pensées pour fonctionner sur le long terme avec les acteurs locaux.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Notre force</p>
+          <h2>Un réseau de restaurateurs engagés</h2>
+          <p>Depuis sa création, l'association s'appuie sur les décideurs du monde de la restauration : chaînes, restaurants indépendants, boulangeries. Arrondi en caisse, reversement par repas servi, menus solidaires… chaque opération transforme un geste du quotidien en repas pour un enfant.</p>
+          <a class="btn ghost" href="restaurateurs.html">Comment participer</a>
+        </div>
+        <div>
+          <blockquote class="quote">Aider les enfants des régions défavorisées à manger dans de bonnes conditions d'hygiène et de nutrition.</blockquote>
+          <p style="color:var(--muted);margin-top:16px">Parrainée par le chef <strong>Thierry Marx</strong> et le comédien <strong>Michel Boujenah</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <p class="eyebrow">En chiffres</p>
+        <h2>L'impact de l'association</h2>
+        <div class="grid g3">
+          <div class="card"><h3 style="font-size:2.4rem;color:var(--terra)">2007</h3><p>Année de création de l'association.</p></div>
+          <div class="card"><h3 style="font-size:2.4rem;color:var(--terra)"><span class="todo">XX</span></h3><p>Cantines et cuisines financées. <span class="todo">chiffre à compléter</span></p></div>
+          <div class="card"><h3 style="font-size:2.4rem;color:var(--terra)"><span class="todo">XX</span></h3><p>Enfants qui mangent chaque jour dans une cantine soutenue. <span class="todo">chiffre à compléter</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Chaque repas peut en financer un autre</h2>
+        <p>Restaurateur, entreprise ou particulier : rejoignez celles et ceux qui transforment la restauration en levier de solidarité.</p>
+        <div class="actions">
+          <a class="btn" href="contact.html#dons">Faire un don</a>
+          <a class="btn ghost" href="restaurateurs.html">Engager mon restaurant</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© Restaurants Sans Frontières · Association créée en 2007</span>
+      <span><a href="association.html">L'association</a> · <a href="contact.html">Contact</a> · <a href="contact.html#dons">Faire un don</a></span>
+    </div>
+  </footer>
+  <script>
+    const t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+    t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+  </script>
+</body>
+</html>
